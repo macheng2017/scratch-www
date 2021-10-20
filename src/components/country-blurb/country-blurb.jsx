@@ -11,16 +11,23 @@ const CountryBlurb = props => (
                 <img
                     className="large"
                     src={props.large_image}
+                    alt={props.alt}
                 />
             </div>
         }
         <div className="half">
             <div className="country-info">
-                <img src={props.icon} />
+                <img
+                    src={props.icon}
+                    alt={props.iconAlt}
+                />
                 <div className="country-text">
                     <h5>{props.title}</h5>
                     <div className="location">
-                        <img src={props.list_icon} />
+                        <img
+                            src={props.list_icon}
+                            alt="location icon"
+                        />
                         <span>{props.country}</span>
                     </div>
                 </div>
@@ -32,6 +39,7 @@ const CountryBlurb = props => (
                 <img
                     className="large"
                     src={props.large_image}
+                    alt={props.alt}
                 />
             </div>
         }
@@ -45,7 +53,9 @@ CountryBlurb.propTypes = {
     country: PropTypes.string,
     paragraph: PropTypes.string,
     className: PropTypes.string,
-    large_image: PropTypes.string
+    large_image: PropTypes.string,
+    alt: PropTypes.string,
+    iconAlt: PropTypes.string
 };
 
 module.exports = CountryBlurb;
