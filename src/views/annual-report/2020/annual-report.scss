@@ -4,6 +4,8 @@
 $base-bg: $ui-white;
 $annual-report-aqua: #088763;
 $annual-report-teal: #297EA4;
+$masthead-breakpoint: "only screen and (max-width : 960px)";
+$masthead-breakpoint-wave: "only screen and (max-width : 1060px)";
 
 $ui-purple-dark: hsla(260, 55, 55, 1);
 // $motion-blue-3 #3373CC
@@ -54,7 +56,7 @@ p {
     line-height: 2em;
 }
 
-a{
+a, a:link, a:visited, a:active{
     cursor: pointer;
     color: $motion-blue-3;
 }
@@ -92,7 +94,7 @@ a{
         color: $ui-white;
     }
 
-    @media #{$intermediate-and-smaller} {
+    @media #{$masthead-breakpoint} {
         .inner {
             width: 100%;
         }
@@ -122,7 +124,7 @@ a{
         }
     }
 
-    @media #{$intermediate-and-smaller} {
+    @media #{$masthead-breakpoint} {
         flex-direction: column;
         align-items: center;
 
@@ -160,10 +162,8 @@ a{
 
 .wave-icon-desktop {
     margin-left: -65px;
-    @media #{$intermediate} {
-        .masthead-content, img {
-            margin-left: 0px;
-        }
+    @media #{$masthead-breakpoint-wave} {
+        margin-left: 0px;
     }
 }
 
@@ -1239,6 +1239,10 @@ img.comment-viz{
                 max-width: 840px;
                 width: 100%;
                 margin-top: 50px;
+                text-align: left;
+                @media #{$medium-and-smaller} {
+                    flex-direction: column;
+                }
                 &.split{
                     &.content{
                         .text{
@@ -1392,6 +1396,9 @@ img.comment-viz{
             margin-top: -70px;
             z-index: 1;
             position: relative;
+            @media #{$intermediate-and-smaller} {
+                margin-top: 0px;
+            }
             p{
                 margin: 0px;
             }
@@ -1526,6 +1533,10 @@ img.comment-viz{
             .community-quote {
                 width: 100%;
                 margin: 24px;
+                &.single{
+                    width: calc(100% - 30px);
+                    padding: 0 15px;
+                }
 
                 h5{
                     margin: 0;
@@ -1641,36 +1652,62 @@ img.comment-viz{
 
     .video-container {
         width: 100%;
+        height: 500px;
         display: flex;
         justify-content: center;
-        margin-top: 30px;
+        margin-bottom: 72px;
+        @media #{$medium}{
+            height: 400px;
+            margin-bottom: 0px;
+        }
+        @media #{$small}{
+            height: 300px;
+            margin-bottom: 0px;
+        }
+        + .inner{
+            padding-top: 0px;
+        }
+    }
+
+    .video-background {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media #{$medium}{
+            height: 400px;
+        }
+
+        @media #{$small}{
+            height: 300px;
+        }
+
+        &.adaptation {
+            background-image: url("/images/annual-report/2020/adaptation/createalongs_splash.svg");
+        }
+
+        &.connectivity {
+            background-image: url("/images/annual-report/2020/connectivity/aroundtheworld_splash.svg");
+        }
     }
 
     .video-thumbnail .button{
-        top: -113px;
+        top: 6px;
         font-size: 15px;
         position: relative;
         border-radius: 3px;
-        @media #{$medium}{
-            top: -99px;
-        }
-        @media #{$small}{
-            top: -107px;
-            top: -74px;
-            font-size: 12px;
-        }
     }
 
     .themes .video-thumbnail .button{
-        top: -119px;
-        @media #{$medium}{
-            top: -107px;
-        }
-        @media #{$small}{
-            top: -105px;
-            top: -74px;
-            font-size: 12px;
-        }
+        top: 0px;
     }
 
     .tweet-container{
@@ -1693,40 +1730,6 @@ img.comment-viz{
             }
             .twitter-tweet{
                 width: 100%;
-            }
-        }
-    }
-
-    .video-background {
-        width: 100%;
-        height: 500px;
-        overflow: hidden;
-
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &.blm {
-            background-image: url("/images/annual-report/initiatives/BLM Video Splash.svg");
-        }
-
-        &.abhi {
-            background-image: url("/images/annual-report/initiatives/Abhi Video Splash.svg");
-
-            .button {
-                background-color: $ui-aqua;
-            }
-        }
-
-        &.cps {
-            background-image: url("/images/annual-report/initiatives/schools/CPS Story/CPS Video Splash.svg");
-
-            .button {
-                background-color: $ui-purple-dark;
             }
         }
     }
