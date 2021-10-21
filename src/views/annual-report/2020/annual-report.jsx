@@ -1146,7 +1146,7 @@ class AnnualReport extends React.Component {
                                         />
                                         <CountryBlurb
                                             className="regular"
-                                            icon="/images/annual-report/2020/connectivity/Scratch Around the World/Brazil Creative Learning Network logo.png"
+                                            icon="/images/annual-report/2020/connectivity/Scratch Around the World/Brazil-Creative-Learning-Network-logo.png"
                                             title={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryBrazilTitle'}
                                             )}
@@ -1188,7 +1188,7 @@ class AnnualReport extends React.Component {
                                         />
                                         <CountryBlurb
                                             className="regular"
-                                            icon="/images/annual-report/2020/connectivity/Scratch Around the World/Raspberry Pi logo.png"
+                                            icon="/images/annual-report/2020/connectivity/Scratch Around the World/Raspberry-Pi-logo.png"
                                             title={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryUSATitle'}
                                             )}
@@ -1724,7 +1724,7 @@ class AnnualReport extends React.Component {
                                     <TimelineCard
                                         className="left"
                                         link={this.props.intl.formatMessage(
-                                            {id: 'annualReport.2020.yearInReviewCard1Link'}
+                                            {id: 'annualReport.2020.yearInReviewCard2Link'}
                                         )}
                                         date={this.props.intl.formatMessage(
                                             {id: 'annualReport.2020.yearInReviewCard2Date'}
@@ -1902,6 +1902,11 @@ class AnnualReport extends React.Component {
                                             alt={this.props.intl.formatMessage({id: 'annualReport.2020.altJune'})}
                                         />
                                         <img
+                                            className="june-2"
+                                            src="/images/annual-report/2020/community/Timeline/avatar_Bellevue91.png"
+                                            alt="bellevue"
+                                        />
+                                        <img
                                             className="july"
                                             src="/images/annual-report/2020/community/Timeline/July Illustration.svg"
                                             alt={this.props.intl.formatMessage({id: 'annualReport.2020.altJuly'})}
@@ -2053,6 +2058,9 @@ class AnnualReport extends React.Component {
                                     </p>
                                     <p>
                                         <FormattedMessage id="annualReport.2020.EDMessageText4" />
+                                    </p>
+                                    <p className="pull-quote">
+                                        <FormattedMessage id="annualReport.2020.EDMessagePullQuote" />
                                     </p>
                                     <p>
                                         <FormattedMessage id="annualReport.2020.EDMessageText5" />
