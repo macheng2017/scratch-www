@@ -6,24 +6,25 @@ const VideoPreview = require('../video-preview/video-preview.jsx');
 require('./text-and-media-snippet.scss');
 
 const TextAndMediaSnippet = props => (
-    <div className={classNames('annual-report-example', props.className)}>
+    <div className={classNames('text-and-media-snippet', props.className)}>
         {props.className === 'regular' &&
             <div className="half">
                 {props.type === 'video' &&
                     <VideoPreview
                         buttonMessage=""
-                        thumbnail={props.large_image}
+                        thumbnail={props.largeImage}
                         thumbnailWidth="300"
                         videoHeight="216"
-                        videoId={props.video_id}
+                        videoId={props.videoId}
                         videoWidth="380"
                         alt={props.alt}
+                        spinnerColor={props.spinnerColor}
                     />
                 }
                 {props.type !== 'video' &&
                     <img
                         className="large"
-                        src={props.large_image}
+                        src={props.largeImage}
                         alt={props.alt}
                     />
                 }
@@ -31,13 +32,23 @@ const TextAndMediaSnippet = props => (
         }
         <div className="half">
             <h5>{props.title}</h5>
-            <p>{props.paragraph}</p>
+            <p>
+                {props.paragraph}
+                {props.link &&
+                    <a href={props.link}>
+                        {props.linkText}
+                    </a>
+                }
+                {props.paragraph2 &&
+                    <span>{props.paragraph2}</span>
+                }
+            </p>
         </div>
         {props.className === 'reverse' &&
             <div className="half">
                 <img
                     className="large"
-                    src={props.large_image}
+                    src={props.largeImage}
                     alt={props.alt}
                 />
             </div>
@@ -46,7 +57,7 @@ const TextAndMediaSnippet = props => (
             <div className="half">
                 <img
                     className="large"
-                    src={props.large_image}
+                    src={props.largeImage}
                     alt={props.alt}
                 />
             </div>
@@ -57,11 +68,15 @@ const TextAndMediaSnippet = props => (
 TextAndMediaSnippet.propTypes = {
     title: PropTypes.string,
     paragraph: PropTypes.string,
-    large_image: PropTypes.string,
+    largeImage: PropTypes.string,
     className: PropTypes.string,
-    video_id: PropTypes.string,
+    videoId: PropTypes.string,
     type: PropTypes.string,
-    alt: PropTypes.string
+    alt: PropTypes.string,
+    link: PropTypes.string,
+    linkText: PropTypes.string,
+    paragraph2: PropTypes.string,
+    spinnerColor: PropTypes.string
 };
 
 module.exports = TextAndMediaSnippet;

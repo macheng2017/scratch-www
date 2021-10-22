@@ -15,7 +15,7 @@ const Grid = require('../../../components/grid/grid.jsx');
 const Button = require('../../../components/forms/button.jsx');
 const FlexRow = require('../../../components/flex-row/flex-row.jsx');
 const Comment = require('../../../components/comment/comment.jsx');
-const CountryBlurb = require('../../../components/country-blurb/country-blurb.jsx');
+const CountryBlurb = require('./country-blurb/country-blurb.jsx');
 const TextAndMediaSnippet = require('../../../components/text-and-media-snippet/text-and-media-snippet.jsx');
 const TimelineCard = require('../../../components/timeline-card/timeline-card.jsx');
 const WorldMap = require('../../../components/world-map/world-map.jsx');
@@ -34,7 +34,7 @@ require('./annual-report.scss');
 
 // Some constants used for the page subnav and section refs
 const SECTIONS = {
-    founders_message: 'founders-message',
+    founders_message: 'founders_message',
     mission: 'mission',
     reach: 'reach',
     themes: 'themes',
@@ -396,9 +396,7 @@ class AnnualReport extends React.Component {
                                             )}
                                         />
                                         <div className="signature-container">
-                                            <p className="message-signature">
-                                                <FormattedMessage id="annualReport.2020.foundersMessageSignature" />
-                                            </p>
+                                            <p className="message-signature">Mitch Resnick</p>
                                             <p>
                                                 <FormattedMessage id="annualReport.2020.foundersMessageScratchTitle" />
                                             </p>
@@ -1132,7 +1130,7 @@ class AnnualReport extends React.Component {
                                             title={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryChileTitle'}
                                             )}
-                                            list_icon="/images/annual-report/2020/Symbols-UI/Location_icon.svg"
+                                            listIcon="/images/annual-report/2020/Symbols-UI/Location_icon.svg"
                                             country={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryChile'}
                                             )}
@@ -1145,7 +1143,7 @@ class AnnualReport extends React.Component {
                                             paragraph={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryChileParagraph'}
                                             )}
-                                            large_image="/images/annual-report/2020/connectivity/Scratch Around the World/Scratch Al Sur graphic.svg"
+                                            largeImage="/images/annual-report/2020/connectivity/Scratch Around the World/Scratch Al Sur graphic.svg"
                                         />
                                         <CountryBlurb
                                             className="regular"
@@ -1153,7 +1151,7 @@ class AnnualReport extends React.Component {
                                             title={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryBrazilTitle'}
                                             )}
-                                            list_icon="/images/annual-report/2020/Symbols-UI/Location_icon.svg"
+                                            listIcon="/images/annual-report/2020/Symbols-UI/Location_icon.svg"
                                             country={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryBrazil'}
                                             )}
@@ -1166,7 +1164,7 @@ class AnnualReport extends React.Component {
                                             paragraph={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryBrazilParagraph'}
                                             )}
-                                            large_image="/images/annual-report/2020/connectivity/Scratch Around the World/Brazil Creative Learning Network graphic.svg"
+                                            largeImage="/images/annual-report/2020/connectivity/Scratch Around the World/Brazil Creative Learning Network graphic.svg"
                                         />
                                         <CountryBlurb
                                             className="reverse"
@@ -1174,7 +1172,7 @@ class AnnualReport extends React.Component {
                                             title={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryIndiaTitle'}
                                             )}
-                                            list_icon="/images/annual-report/2020/Symbols-UI/Location_icon.svg"
+                                            listIcon="/images/annual-report/2020/Symbols-UI/Location_icon.svg"
                                             country={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryIndia'}
                                             )}
@@ -1187,7 +1185,11 @@ class AnnualReport extends React.Component {
                                             paragraph={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryIndiaParagraph'}
                                             )}
-                                            large_image="/images/annual-report/2020/connectivity/Scratch Around the World/Quest Alliance graphic.svg"
+                                            link="https://www.facebook.com/118389481508616/videos/818137148590473"
+                                            linkText={this.props.intl.formatMessage(
+                                                {id: 'annualReport.2020.connectivityCountryIndiaParagraphLinkText'}
+                                            )}
+                                            largeImage="/images/annual-report/2020/connectivity/Scratch Around the World/Quest Alliance graphic.svg"
                                         />
                                         <CountryBlurb
                                             className="regular"
@@ -1195,7 +1197,7 @@ class AnnualReport extends React.Component {
                                             title={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryUSATitle'}
                                             )}
-                                            list_icon="/images/annual-report/2020/Symbols-UI/Location_icon.svg"
+                                            listIcon="/images/annual-report/2020/Symbols-UI/Location_icon.svg"
                                             country={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryUSA'}
                                             )}
@@ -1208,7 +1210,11 @@ class AnnualReport extends React.Component {
                                             paragraph={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.connectivityCountryUSAParagraph'}
                                             )}
-                                            large_image="/images/annual-report/2020/connectivity/Scratch Around the World/Raspberry Pi graphic.svg"
+                                            link="https://www.youtube.com/watch?v=kR1o69koAgc"
+                                            linkText={this.props.intl.formatMessage(
+                                                {id: 'annualReport.2020.connectivityCountryUSAParagraphLinkText'}
+                                            )}
+                                            largeImage="/images/annual-report/2020/connectivity/Scratch Around the World/Raspberry Pi graphic.svg"
                                         />
                                     </div>
                                     <div className="resources">
@@ -1235,7 +1241,7 @@ class AnnualReport extends React.Component {
                                                 {id: 'annualReport.2020.altTutorial'}
                                             )}
                                             type="image"
-                                            large_image="/images/annual-report/2020/connectivity/TutorialUI.svg"
+                                            largeImage="/images/annual-report/2020/connectivity/TutorialUI.svg"
                                         />
                                         <TextAndMediaSnippet
                                             className="regular"
@@ -1249,8 +1255,9 @@ class AnnualReport extends React.Component {
                                                 {id: 'annualReport.2020.altGettingStarted'}
                                             )}
                                             type="video"
-                                            video_id="xfh9bvbeik"
-                                            large_image="/images/annual-report/2020/connectivity/Getting Started with Scratch video.png"
+                                            videoId="xfh9bvbeik"
+                                            largeImage="/images/annual-report/2020/connectivity/Getting Started with Scratch video.png"
+                                            spinnerColor="blue"
                                         />
                                         <TextAndMediaSnippet
                                             className="full-width"
@@ -1264,7 +1271,7 @@ class AnnualReport extends React.Component {
                                                 {id: 'annualReport.2020.altEditor'}
                                             )}
                                             type="image"
-                                            large_image="/images/annual-report/2020/connectivity/isiXhosa_scratcheditor.jpg"
+                                            largeImage="/images/annual-report/2020/connectivity/isiXhosa_scratcheditor.jpg"
                                         />
                                     </div>
                                 </div>
@@ -1332,7 +1339,7 @@ class AnnualReport extends React.Component {
                                         </div>
                                     </div>
                                     <div className="flex-content">
-                                        <div className="annual-report-example regular between">
+                                        <div className="text-and-media-snippet regular between">
                                             <div className="half">
                                                 <iframe
                                                     src="https://scratch.mit.edu/projects/389148460/embed"
@@ -1345,7 +1352,9 @@ class AnnualReport extends React.Component {
                                                 />
                                             </div>
                                             <div className="half">
-                                                <p>Aaron’s students worked together to build a “kooky” version of their town called “Norwouldn’t,” packed with storybook creatures, original artwork, and interconnecting narratives. It was one of many collaborative Scratch projects Aaron facilitated to remind students that even while COVID-19 kept them inside their homes, they were still part of a caring and joyful community.</p>
+                                                <p>
+                                                    <FormattedMessage id="annualReport.2020.aaronText" />
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -1358,6 +1367,10 @@ class AnnualReport extends React.Component {
                                         </h2>
                                         <p>
                                             <FormattedMessage id="annualReport.2020.adaptationHighlightText2b" />
+                                            <a href="https://sip.scratch.mit.edu/scratchathome/">
+                                                <FormattedMessage id="annualReport.2020.adaptationHighlightText2c" />
+                                            </a>
+                                            <FormattedMessage id="annualReport.2020.adaptationHighlightText2d" />
                                         </p>
                                     </div>
                                     <div className="world">
@@ -1366,6 +1379,10 @@ class AnnualReport extends React.Component {
                                         </h4>
                                         <p>
                                             <FormattedMessage id="annualReport.2020.adaptationHighlightText3b" />
+                                            <a href="https://www.youtube.com/playlist?list=PLpfxVARjkP-953-E52NskKvbCBXEgHkwr">
+                                                <FormattedMessage id="annualReport.2020.adaptationHighlightText3c" />
+                                            </a>
+                                            <FormattedMessage id="annualReport.2020.adaptationHighlightText3d" />
                                         </p>
                                     </div>
                                 </div>
@@ -1437,11 +1454,18 @@ class AnnualReport extends React.Component {
                                             paragraph={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.adaptationHighlightText4b'}
                                             )}
+                                            link="https://scratch.mit.edu/studios/25970382"
+                                            linkText={this.props.intl.formatMessage(
+                                                {id: 'annualReport.2020.adaptationHighlightText4c'}
+                                            )}
+                                            paragraph2={this.props.intl.formatMessage(
+                                                {id: 'annualReport.2020.adaptationHighlightText4d'}
+                                            )}
                                             alt={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.altHackYourWindow'}
                                             )}
                                             type="image"
-                                            large_image="/images/annual-report/2020/adaptation/hackyourwindow_gif.gif"
+                                            largeImage="/images/annual-report/2020/adaptation/hackyourwindow_gif.gif"
                                         />
                                     </div>
                                     <div className="left-align">
@@ -1475,8 +1499,15 @@ class AnnualReport extends React.Component {
                                             alt={this.props.intl.formatMessage(
                                                 {id: 'annualReport.2020.altScratchInteraction'}
                                             )}
+                                            link="https://theclubhousenetwork.org/"
+                                            linkText={this.props.intl.formatMessage(
+                                                {id: 'annualReport.2020.adaptationSnapshot1TextB'}
+                                            )}
+                                            paragraph2={this.props.intl.formatMessage(
+                                                {id: 'annualReport.2020.adaptationSnapshot1TextC'}
+                                            )}
                                             type="image"
-                                            large_image="/images/annual-report/2020/adaptation/Computer Clubhouse Illustration.svg"
+                                            largeImage="/images/annual-report/2020/adaptation/Computer Clubhouse Illustration.svg"
                                         />
                                     </div>
                                     <div className="flex-content lg">
@@ -1492,7 +1523,7 @@ class AnnualReport extends React.Component {
                                                 {id: 'annualReport.2020.altImageBubbles'}
                                             )}
                                             type="image"
-                                            large_image="/images/annual-report/2020/adaptation/BYIS Graphic.svg"
+                                            largeImage="/images/annual-report/2020/adaptation/BYIS Graphic.svg"
                                         />
                                     </div>
                                 </div>
@@ -1546,13 +1577,17 @@ class AnnualReport extends React.Component {
                                             scrolling="no"
                                             allowFullScreen
                                         />
-                                        <p>project by u/STORMPRIMEX</p>
+                                        <p>
+                                            <FormattedMessage id="annualReport.2020.projectBy" /> u/STORMPRIMEX
+                                        </p>
                                     </div>
                                     <a
                                         className="download community"
                                         href="https://drive.google.com/file/d/1Kpwf4vN5I6SYY3l941v0IsP_tHVasuXW/view"
                                     >
-                                        <span>Virtual Family Coding Nights Guide</span>
+                                        <span>
+                                            <FormattedMessage id="annualReport.2020.communityDownloadButton" />
+                                        </span>
                                         <img
                                             src="/images/annual-report/2020/Symbols-UI/File Download.svg"
                                             alt={this.props.intl.formatMessage({id: 'annualReport.2020.altFileDownload'})}
@@ -1563,7 +1598,9 @@ class AnnualReport extends React.Component {
                                         <div className="community-quote single">
                                             <div className="quote-person">
                                                 <Avatar
-                                                    alt="Kendra Mallory"
+                                                    alt={this.props.intl.formatMessage(
+                                                        {id: 'annualReport.2020.altAvatar'}
+                                                    )}
                                                     src="/images/annual-report/2020/community/quote_kendramallory.svg"
                                                 />
                                                 <div>
@@ -1597,7 +1634,7 @@ class AnnualReport extends React.Component {
                                         alt={this.props.intl.formatMessage({id: 'annualReport.2020.altWaveTop'})}
                                     />
                                     <img
-                                        src="/images/annual-report/2020/community/Online Community Illustration.svg"
+                                        src="/images/annual-report/2020/community/Online Community Illustration.png"
                                         alt={this.props.intl.formatMessage({id: 'annualReport.2020.altWaveBottom'})}
                                     />
                                 </div>
@@ -1611,12 +1648,14 @@ class AnnualReport extends React.Component {
                                         <div className="community-quote">
                                             <div className="quote-person">
                                                 <Avatar
-                                                    alt="angelical avatar"
+                                                    alt={this.props.intl.formatMessage(
+                                                        {id: 'annualReport.2020.altAvatar'}
+                                                    )}
                                                     src="https://cdn2.scratch.mit.edu/get_image/user/36591_60x60.png"
                                                 />
                                                 <div>
                                                     <h5>
-                                                        <FormattedMessage id="annualReport.2020.communityQuoteGroupName1" />
+                                                        angelical
                                                     </h5>
                                                 </div>
                                             </div>
@@ -1630,12 +1669,14 @@ class AnnualReport extends React.Component {
                                         <div className="community-quote">
                                             <div className="quote-person">
                                                 <Avatar
-                                                    alt="dlore2009 avatar"
+                                                    alt={this.props.intl.formatMessage(
+                                                        {id: 'annualReport.2020.altAvatar'}
+                                                    )}
                                                     src="https://cdn2.scratch.mit.edu/get_image/user/61442584_60x60.png"
                                                 />
                                                 <div>
                                                     <h5>
-                                                        <FormattedMessage id="annualReport.2020.communityQuoteGroupName2" />
+                                                        dlore2009
                                                     </h5>
                                                 </div>
                                             </div>
@@ -1649,12 +1690,14 @@ class AnnualReport extends React.Component {
                                         <div className="community-quote">
                                             <div className="quote-person">
                                                 <Avatar
-                                                    alt="qood avatar"
+                                                    alt={this.props.intl.formatMessage(
+                                                        {id: 'annualReport.2020.altAvatar'}
+                                                    )}
                                                     src="/images/annual-report/2020/community/avatar_qood.jpg"
                                                 />
                                                 <div>
                                                     <h5>
-                                                        <FormattedMessage id="annualReport.2020.communityQuoteGroupName3" />
+                                                        qood
                                                     </h5>
                                                 </div>
                                             </div>
@@ -1668,12 +1711,14 @@ class AnnualReport extends React.Component {
                                         <div className="community-quote">
                                             <div className="quote-person">
                                                 <Avatar
-                                                    alt="Mechanical_pencil avatar"
+                                                    alt={this.props.intl.formatMessage(
+                                                        {id: 'annualReport.2020.altAvatar'}
+                                                    )}
                                                     src="https://cdn2.scratch.mit.edu/get_image/user/176301_60x60.png"
                                                 />
                                                 <div>
                                                     <h5>
-                                                        <FormattedMessage id="annualReport.2020.communityQuoteGroupName4" />
+                                                        Mechanical_pencil
                                                     </h5>
                                                 </div>
                                             </div>
@@ -1720,7 +1765,10 @@ class AnnualReport extends React.Component {
                                             {id: 'annualReport.2020.altJanuaryCard'}
                                         )}
                                         image="/images/annual-report/2020/community/Timeline/Images/endofthedecade_sds.jpg"
-                                        attribution="project by u/lukiepie2011"
+                                        projectBy={this.props.intl.formatMessage(
+                                            {id: 'annualReport.2020.projectBy'}
+                                        )}
+                                        attribution="u/lukiepie2011"
                                     />
                                     <img
                                         className="connector left"
@@ -1800,6 +1848,7 @@ class AnnualReport extends React.Component {
                                         )}
                                         image="/images/annual-report/2020/community/Timeline/Images/blmvideo.png"
                                         videoId="r1pmlyylye"
+                                        spinnerColor="blue"
                                     />
                                     <img
                                         className="connector"
@@ -1824,7 +1873,10 @@ class AnnualReport extends React.Component {
                                             {id: 'annualReport.2020.altJuneCard'}
                                         )}
                                         image="/images/annual-report/2020/community/Timeline/Images/funathome_sds.jpg"
-                                        attribution="project by u/cellie"
+                                        projectBy={this.props.intl.formatMessage(
+                                            {id: 'annualReport.2020.projectBy'}
+                                        )}
+                                        attribution="u/cellie"
                                     />
                                     <TimelineCard
                                         className="left"
@@ -1864,7 +1916,10 @@ class AnnualReport extends React.Component {
                                             {id: 'annualReport.2020.altJulyCard'}
                                         )}
                                         image="/images/annual-report/2020/community/Timeline/Images/scratchcamp.jpg"
-                                        attribution="project by u/LGMammoth"
+                                        projectBy={this.props.intl.formatMessage(
+                                            {id: 'annualReport.2020.projectBy'}
+                                        )}
+                                        attribution="u/LGMammoth"
                                     />
                                     <img
                                         className="connector right"
@@ -1889,7 +1944,10 @@ class AnnualReport extends React.Component {
                                             {id: 'annualReport.2020.altOctoberCard'}
                                         )}
                                         image="/images/annual-report/2020/community/Timeline/Images/scratchtober.jpg"
-                                        attribution="project by u/IDK_HAVE_SOME_NUMBER"
+                                        projectBy={this.props.intl.formatMessage(
+                                            {id: 'annualReport.2020.projectBy'}
+                                        )}
+                                        attribution="u/IDK_HAVE_SOME_NUMBER"
                                     />
                                     <div className="illustrations">
                                         <img
@@ -1910,7 +1968,9 @@ class AnnualReport extends React.Component {
                                         <img
                                             className="june-2"
                                             src="/images/annual-report/2020/community/Timeline/avatar_Bellevue91.png"
-                                            alt="bellevue"
+                                            alt={this.props.intl.formatMessage(
+                                                {id: 'annualReport.2020.altAvatar'}
+                                            )}
                                         />
                                         <img
                                             className="july"
@@ -1930,7 +1990,9 @@ class AnnualReport extends React.Component {
                                             <div className="community-quote">
                                                 <div className="quote-person">
                                                     <Avatar
-                                                        alt="Anna Lytical"
+                                                        alt={this.props.intl.formatMessage(
+                                                            {id: 'annualReport.2020.altAvatar'}
+                                                        )}
                                                         src="/images/annual-report/2020/community/quote_annalytical.svg"
                                                     />
                                                     <div>
@@ -2076,12 +2138,14 @@ class AnnualReport extends React.Component {
                                     </p>
                                     <div className="signature">
                                         <Avatar
-                                            alt="Shawna Young"
+                                            alt={this.props.intl.formatMessage(
+                                                {id: 'annualReport.2020.altAvatar'}
+                                            )}
                                             src="/images/annual-report/2020/shawna_headshot.jpg"
                                         />
                                         <div>
                                             <h5>
-                                                <FormattedMessage id="annualReport.2020.EDName" />
+                                                Shawna Young
                                             </h5>
                                             <p>
                                                 <FormattedMessage id="annualReport.2020.EDTitle" />

@@ -30,6 +30,7 @@ const TimelineCard = props => (
                 videoId={props.videoId}
                 videoWidth="380"
                 alt={props.alt}
+                spinnerColor={props.spinnerColor}
             />
         }
         {!props.videoId && props.image &&
@@ -40,7 +41,7 @@ const TimelineCard = props => (
             />
         }
         {props.attribution &&
-            <p>{props.attribution}</p>
+            <p>{props.projectBy} {props.attribution}</p>
         }
     </div>
 );
@@ -54,7 +55,9 @@ TimelineCard.propTypes = {
     videoId: PropTypes.string,
     attribution: PropTypes.string,
     className: PropTypes.string,
-    alt: PropTypes.string
+    alt: PropTypes.string,
+    projectBy: PropTypes.string,
+    spinnerColor: PropTypes.string
 };
 
 module.exports = TimelineCard;
